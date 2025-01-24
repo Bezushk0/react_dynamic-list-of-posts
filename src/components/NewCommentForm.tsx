@@ -70,6 +70,9 @@ export const NewCommentForm: React.FC<Props> = ({
         updateCommentList(prev => [...prev, receivedComment as Comment]);
         setText('');
       })
+      .catch(() => {
+        alert('Failed to add comment. Please try again later.');
+      })
       .finally(() => setIsLoading(false));
   };
 
@@ -128,7 +131,7 @@ export const NewCommentForm: React.FC<Props> = ({
 
         <div className="control has-icons-left has-icons-right">
           <input
-            type="text"
+            type="email"
             name="email"
             value={email}
             id="comment-author-email"

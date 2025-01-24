@@ -33,8 +33,8 @@ export const App = () => {
       }
 
       setUsers(fetchedUsers);
-    } catch (err) {
-      setError('Failed to load users');
+    } catch {
+      setError('Failed to load posts');
     } finally {
       setIsLoading(false);
     }

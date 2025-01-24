@@ -64,7 +64,6 @@ export const UserSelector: React.FC<Props> = ({
               className={cn('dropdown-item', {
                 'is-active': selectedUser?.id === user.id,
               })}
-              onClick={() => setSelectedUser(user)}
               onMouseDown={() => handleUserSelect(user)}
             >
               {user.name}

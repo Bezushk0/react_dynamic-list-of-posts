@@ -26,7 +26,7 @@ export const PostDetails: React.FC<Props> = ({ post }) => {
       );
 
       setComments(fetchedComments);
-    } catch (err) {
+    } catch {
       setError('Something went wrong');
     } finally {
       setIsLoading(false);
